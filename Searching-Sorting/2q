@@ -1,0 +1,45 @@
+
+
+class BubbleRec{
+
+     void BubbleSort(int arr[],int size){
+	
+		if(size==1){
+		
+			return;
+ 
+		}
+
+		for(int i=0;i<arr.length;i++){
+		
+		
+			if(arr[i]>arr[i+1]){
+			
+				int temp=arr[i];
+				arr[i]=arr[i+1];
+				arr[i+1]=temp;
+			
+			}
+		
+		}
+		BubbleSort(arr,size-1);
+	}
+	
+	public static void main(String[] args){
+	
+		int arr[]=new int[]{7,3,9,4,2,5,6};
+
+		BubbleSortDemo obj=new BubbleSortDemo();
+		obj.BubbleSort(arr,arr.length);
+	
+		for(int i=0;i<arr.length;i++){
+		
+			System.out.println(arr[i]);
+		
+		
+		}
+	
+	}
+
+	
+}
