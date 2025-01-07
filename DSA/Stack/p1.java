@@ -1,0 +1,1 @@
+//predefind stack funtion
