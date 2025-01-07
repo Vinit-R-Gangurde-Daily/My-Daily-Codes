@@ -1,0 +1,33 @@
+
+
+class MyThread extends Thread{
+
+   public void fun(){
+   
+
+   
+   }
+
+}
+
+
+class ThreadDemo{
+
+	public static void main(String[] args){
+	
+          
+		//read b=new Thread();
+		//stem.out.println();
+	       
+          MyThread obj=new MyThread();
+	   obj.start();
+
+
+
+                           	  
+
+	
+	}
+
+
+}
