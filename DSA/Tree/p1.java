@@ -1,4 +1,11 @@
 
+
+//------------Binary tree---------------------- 
+//use three methods for traversal over a tree
+//DLR = data-left-right(PreOrder)
+//LDR = left-data-right(InOrder)
+//LRD = left-Right-data(PostOrder)
+
 import java.util.*;
 
 class Node{
@@ -47,32 +54,31 @@ class BinaryTreeClient{
 		 return newNode;
 	
 	}
-	//InOrder
-
-	void InOrderBT(Node root){
+	//PreOrderBT
+	void PreOrderBT(Node root){
 
 	       if(root==null){
 	           return;
 	       }
 
 	       System.out.println(root.data);
-	       InOrderBT(root.left);
-	       InOrderBT(root.right);
+	       PreOrderBT(root.left);
+	       PreOrderBT(root.right);
 
 	
 	}
 
-	//preOrder
-	 void PreOrderBT(Node root){
+	//InOrderBT
+	 void InOrderBT(Node root){
 
                if(root==null){
                    return;
                }
 
                
-               PreOrderBT(root.left);
+               InOrderBT(root.left);
                 System.out.println(root.data);
-	       PreOrderBT(root.right);
+	       InOrderBT(root.right);
 
 
         }
