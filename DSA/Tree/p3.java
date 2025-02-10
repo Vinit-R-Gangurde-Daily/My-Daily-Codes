@@ -1,3 +1,7 @@
+
+
+//delete element from the BST
+
 import java.util.*;
 
 class NodeBST{
@@ -55,7 +59,7 @@ class BinarySearchTreeClientP3{
 
         
         InOrderBT(root.leftBST);
-         System.out.println(root.data);
+         System.out.print(root.data + " ");
     InOrderBT(root.rightBST);
 
 
@@ -113,6 +117,8 @@ class BinarySearchTreeClientP3{
     
     }
 
+    //finding the Inorder-Successor of element which we want to delete
+
     NodeBST FindIS(NodeBST root){
 
         while(root.leftBST != null){
@@ -138,10 +144,13 @@ class BinarySearchTreeClientP3{
 
         BST.InOrderBT(root);
 
+        
+        System.out.println();
 
-        System.out.println("Enter the leaf Node you want to delete: ");
+        System.out.print("Enter the leaf Node you want to delete: ");
         int dele=sc.nextInt();
-        System.out.print("deleted element is : " + BST.deleteNodeBST(root,dele).data);
+    
+        BST.deleteNodeBST(root,dele);
 
 
         BST.InOrderBT(root);
